@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7fe31ff5ee018e565cb26e0dbd7562cd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7fe31ff5ee018e565cb26e0dbd7562cd" ></div>
+</body>
+<script>
+    
+    
+            var map_7fe31ff5ee018e565cb26e0dbd7562cd = L.map(
+                "map_7fe31ff5ee018e565cb26e0dbd7562cd",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[-90, -180], [90, 180]],
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
 
+            
+
+        
+    
+            var tile_layer_0e0e3698c98be3db10e7cb46221af8fc = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 2, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7fe31ff5ee018e565cb26e0dbd7562cd);
+        
+    
+            var feature_group_0ad8398f5dcd60cfd367bd2654668db1 = L.featureGroup(
+                {}
+            ).addTo(map_7fe31ff5ee018e565cb26e0dbd7562cd);
+        
+    
+        function geo_json_ff6e75856de336f76801b658e29f363e_styler(feature) {
+            switch(feature.properties.ISO2) {
+                case "AG": case "AO": case "AS": case "BZ": case "MM": case "SB": case "BI": case "KM": case "CV": case "CK": case "DM": case "ER": case "GF": case "FK": case "FM": case "GD": case "KP": case "KI": case "LA": case "LY": case "MG": case "MQ": case "MS": case "ML": case "MZ": case "MW": case "NC": case "NU": case "NE": case "AI": case "HK": case 
+                "MP": case "IM": case "MO": case "YT": case "AX": case "NF": case "CC": case "AQ": case "BV": case "TF": case "HM": case "IO": case "CX": case "UM": case "VU": case "NR": case "SR": case "PG": case "GW": case "RE": case "PR": case "KN": case "LS": case "BW": case "SL": case "SY": case "TJ": case "TK": case "TO": case "ST": case "TV": case "TM": case "UG": case "VC": case "VG": case "VI": case "WF": case "WS": case "YE": case "ZW": case "GP": case "AN": case "TL": case "PN": case "PW": case "MH": case "PM": case "SH": case "TC": case "EH": case "SJ": case "MF": case "BL": case "GS": 
+                    return {"color": "black", "fillColor": "White", "fillOpacity": 0.7, "weight": 0.5};
+                case "EE": case "AT": case "IS": case "IR": case "IT": case "LI": case "AD": case "GI": case "LU": case "MC": case "NO": case "ES": case "CH": 
+                    return {"color": "black", "fillColor": "Green", "fillOpacity": 0.7, "weight": 0.5};
+                case "FO": case "SM": case "VA": 
+                    return {"color": "black", "fillColor": "Yellow", "fillOpacity": 0.7, "weight": 0.5};
+                case "GG": case "JE": 
+                    return {"color": "black", "fillColor": "Red", "fillOpacity": 0.7, "weight": 0.5};
+                default:
+                    return {"color": "black", "fillColor": "Blue", "fillOpacity": 0.7, "weight": 0.5};
+            }
+        }
+
+        function geo_json_ff6e75856de336f76801b658e29f363e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ff6e75856de336f76801b658e29f363e = L.geoJson(null, {
+                onEachFeature: geo_json_ff6e75856de336f76801b658e29f363e_onEachFeature,
+            
+                style: geo_json_ff6e75856de336f76801b658e29f363e_styler,
+        });
+
+        function geo_json_ff6e75856de336f76801b658e29f363e_add (data) {
+            geo_json_ff6e75856de336f76801b658e29f363e
+                .addData(data)
+                .addTo(feature_group_0ad8398f5dcd60cfd367bd2654668db1);
+        }
+            geo_json_ff6e75856de336f76801b658e29f363e_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[[-61.686668, 17.024441000000134], [-61.73806, 16.989719], [-61.82917, 16.996944], [-61.88361, 17.023609], [-61.887222, 17.10527], [-61.832779, 17.16389], [-61.79445, 17.16333], [-61.67028, 17.090275], [-61.686668, 17.024441000000134]]], [[[-61.72917, 17.608608], [-61.73278, 17.541111], [-61.85306, 17.583054], [-61.873062, 17.703888], [-61.84556, 17.724998], [-61.78722, 17.700554], [-61.72917, 17.608608]]]], "type": "MultiPolygon"}, "properties": {"AREA": 44, "FIPS": "AC", "ISO2": "AG", "ISO3": "ATG", "LAT": 17.078, "LON": -61.783, "NAME": "Antigua and Barbuda", "POP2005": 83039, "REGION": 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             19, "SUBREGION": 29, "UN": 28}, "type": "Feature"}, {"geometry": {"coordinates": [[[2.96361, 36.802216], [3.031389, 36.806389], [3.138333, 36.738327], [3.228055, 36.77861], [3.485555, 36.769165], [3.625, 36.810555], [3.742222, 36.887215], [3.891666, 36.917221], [4.106111, 36.884163], [4.785832, 36.894722], [5.102221, 36.774994], [5.080277, 36.720833], [5.156111, 36.674995], [5.328055, 36.640274], [5.529166, 36.692497], [5.590278, 36.767776], [5.709999, 36.824165], [6, 36.837776], [6.233333, 36.913605], [6.268332, 37.018608], [6.398333, 37.086388], [6.509166, 37.075272], [6.592777, 36.97361], [6.928055, 36.883606], [7.170555, 36.919998], [7.255833, 36.991104], [7.183055, 37.073326], [7.229722, 37.086388], [7.463611, 37.042496], [7.611388, 36.976387], [7.765277, 36.966385], [7.773053, 36.879719], [7.876666, 36.847496], [8.0425, 36.871384], [8.229166, 36.955276], [8.390276, 36.918884], [8.62203, 36.941368], [8.638054, 36.831108], [8.476387, 36.743607], [8.447498, 36.657219], [8.183611, 36.524162], [8.195833, 36.488884], [8.365555, 36.45916], [8.376665, 36.413605], [8.260555, 35.856384], [8.277498, 35.749161], [8.344166, 35.65361], [8.308332, 35.339165], [8.40111, 35.192215], [8.326111, 35.104721], [8.28611, 34.965553], [8.290277, 34.758331], [8.224998, 34.690277], [8.251665, 34.64444], [8.123333, 34.539162], [7.850555, 34.423332], [7.777499, 34.242493], [7.641388, 34.204994], [7.530555, 34.106667], [7.492499, 33.887497], [7.55611, 33.678604], [7.725027, 33.419403], [7.743055, 33.229164], [8.022778, 33.112778], [8.090277, 33.114441], [8.30611, 32.83416], [8.34861, 32.533333], [9.055277, 32.099998], [9.537113, 30.23439], [9.303888, 30.122498], [9.638054, 29.691109], [9.757221, 29.454166], [9.839722, 29.16], [9.871666, 28.80611], [9.789721, 28.256664], [9.957499, 27.853054], [9.733889, 27.316944], [9.848331, 26.908607], [9.930555, 26.859722], [9.895832, 26.695553], [9.916943, 26.673332], [9.871666, 26.514164], [9.499443, 26.357498], [9.393888, 26.170555], [10.037498, 25.321388], [10.054443, 24.838055], [10.218332, 24.75111], [10.252222, 24.605831], [10.422222, 24.478054], [10.715277, 24.567219], [11.558887, 24.302498], [11.986475, 23.522305], [9.742867, 22.226391], [7.450807, 20.852863], [5.812499, 19.44611], [3.331944, 18.976387], [3.114166, 19.156387], [3.277222, 19.389721], [3.21, 19.565277], [3.233055, 19.820274], [2.902222, 19.966942], [2.587778, 20.001663], [2.411666, 20.057499], [2.344166, 20.177776], [2.213055, 20.281387], [2.085, 20.21722], [1.795833, 20.308331], [1.668056, 20.408607], [1.663055, 20.53611], [1.6275, 20.57111], [1.1675, 20.741108], [1.197148, 21.00248], [1.169662, 21.102543], [-0.008056, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
